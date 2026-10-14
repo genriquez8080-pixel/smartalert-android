@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Contribuir"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Campo de dirección -->
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/search_background"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:focusable="false"
+            android:hint="Dirección del usuario"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="16sp" />
+
+        <!-- Tipo de reporte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tipo de reporte"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinnerTipoReporte"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:minWidth="120dp" />
+        </LinearLayout>
+
+        <!-- Agregar foto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Agregar foto"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/btnAgregarFoto"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/circular_button_background"
+                android:clickable="true"
+                android:contentDescription="Agregar foto"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:src="@drawable/ic_add_photo" />
+
+        </LinearLayout>
+
+        <!-- Imagen seleccionada -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:background="#EEEEEE"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/description_background"
+            android:gravity="top|start"
+            android:hint="Describe el problema..."
+            android:inputType="textMultiLine"
+            android:maxLines="8"
+            android:padding="12dp" />
+
+        <!-- Rating -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1" />
+        <TextView
+            android:id="@+id/tvDescripcionPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evalúa la gravedad del incidente"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/system_accent2_500" />
+
+        <!-- Botón Enviar -->
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background"
+            android:text="Enviar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</FrameLayout>

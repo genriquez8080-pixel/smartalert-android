@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FB"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- LOGO -->
+
+        <!-- TITULO -->
+
+        <ImageView
+            android:id="@+id/logoAppRegister"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="36dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_smartalert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTituloRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            app:layout_constraintTop_toBottomOf="@id/logoAppRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <!-- SUBTITULO -->
+        <TextView
+            android:id="@+id/txtSubtituloRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regístrate para continuar"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            app:layout_constraintTop_toBottomOf="@id/txtTituloRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- CARD REGISTRO -->
+        <LinearLayout
+            android:id="@+id/cardRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_login_card"
+            android:padding="20dp"
+            android:elevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtituloRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp">
+
+            <!-- NOMBRE -->
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:hint="Nombre completo"
+                android:padding="10dp"
+                android:inputType="textPersonName"
+                android:backgroundTint="#CBD5E1" />
+
+            <!-- EMAIL -->
+            <EditText
+                android:id="@+id/inputEmailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:hint="Correo electrónico"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="#CBD5E1" />
+
+            <!-- PASSWORD -->
+            <EditText
+                android:id="@+id/inputPasswordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:hint="Contraseña"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:backgroundTint="#CBD5E1" />
+
+            <!-- CONFIRM PASSWORD -->
+            <EditText
+                android:id="@+id/inputPasswordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:hint="Confirmar contraseña"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:backgroundTint="#CBD5E1" />
+
+            <!-- BOTON REGISTRARSE -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:text="Crear cuenta"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#22C55E"
+                android:textColor="@android:color/white" />
+
+            <!-- MENSAJE DE ERROR -->
+            <TextView
+                android:id="@+id/txtErrorRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#DC2626"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- ZONA: YA TIENES CUENTA -->
+        <LinearLayout
+            android:id="@+id/layoutGoToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/cardRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Ya tienes cuenta?"
+                android:textColor="#6B7280"/>
+
+            <TextView
+                android:id="@+id/btnGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Inicia sesión"
+                android:textStyle="bold"
+                android:textColor="#2563EB"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

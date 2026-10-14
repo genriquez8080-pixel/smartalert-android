@@ -1,0 +1,24 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file
+local.properties
+
+# IntelliJ/Android Studio files
+.idea/
+*.iml
+
+# Generated files
+app/build/
+*/build/
+
+# Keystore (if exists)
+*.jks
+*.keystore
+
+# Log files
+*.log
+build/
+
+app/google-services.json
