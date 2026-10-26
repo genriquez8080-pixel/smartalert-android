@@ -4,7 +4,14 @@ Aplicación móvil Android para que la ciudadanía **reporte y consulte incident
 
 > Proyecto académico en equipo — Ingeniería en Sistemas Computacionales, Tecnológico de Estudios Superiores de Chalco.
 
+## Capturas
 
+<!-- Agrega aquí 3 o 4 capturas: mapa, feed, perfil, nuevo reporte -->
+| Feed de reportes | Perfil |
+|---|---|
+|![Feed](Feed.jpeg) | ![Perfil](perfil.jpeg) |
+
+---
 ## Funcionalidades
 
 - **Mapa interactivo** con incidentes viales y zonas de riesgo.
